@@ -13,6 +13,12 @@ Brasília, junho de 2025
 
 [![Vídeo do projeto em funcionamento](https://img.youtube.com/vi/Y1DlGxmF3XM/mqdefault.jpg)](https://www.youtube.com/watch?v=Y1DlGxmF3XM)
 
+## Fotos do projeto
+
+![Foto 1 da BitDogLab](assets/IMG-20250625-WA0040.jpg)
+![Foto 2 da BitDogLab](assets/IMG-20250625-WA0041.jpg)
+![Foto 3 da BitDogLab](assets/IMG-20250625-WA0042.jpg)
+
 ## Visão Geral
 Este documento detalha a arquitetura e implementação de um sistema embarcado multitarefa desenvolvido sobre o sistema operacional de tempo real (RTOS) FreeRTOS. O objetivo principal do projeto é realizar a aquisição de dados de temperatura do sensor interno do microcontrolador e apresentar essa informação de forma contínua e visual através de uma matriz de diodos emissores de luz (LEDs).
 A funcionalidade é modularizada em duas tarefas concorrentes que se comunicam de forma assíncrona, demonstrando um padrão de design produtor-consumidor para garantir a integridade dos dados e a eficiência do sistema.
