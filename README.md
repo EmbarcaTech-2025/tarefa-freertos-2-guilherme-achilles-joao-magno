@@ -1,4 +1,3 @@
-
 # Visualizador de Temperatura com FreeRTOS
 
 Autor: **João Magno e Guilherme Achilles**
@@ -15,14 +14,18 @@ Brasília, junho de 2025
 Este documento detalha a arquitetura e implementação de um sistema embarcado multitarefa desenvolvido sobre o sistema operacional de tempo real (RTOS) FreeRTOS. O objetivo principal do projeto é realizar a aquisição de dados de temperatura do sensor interno do microcontrolador e apresentar essa informação de forma contínua e visual através de uma matriz de diodos emissores de luz (LEDs).
 A funcionalidade é modularizada em duas tarefas concorrentes que se comunicam de forma assíncrona, demonstrando um padrão de design produtor-consumidor para garantir a integridade dos dados e a eficiência do sistema.
 
-## Camada de Abstração de Hardware (HAL): Esta camada isola a aplicação principal dos detalhes de baixo nível do hardware. Funções como a leitura do ADC e o controle da matriz de LEDs são encapsuladas aqui, permitindo que a lógica de negócio em main.c permaneça agnóstica ao hardware subjacente.
+## Camada de Abstração de Hardware (HAL):
+Esta camada isola a aplicação principal dos detalhes de baixo nível do hardware. Funções como a leitura do ADC e o controle da matriz de LEDs são encapsuladas aqui, permitindo que a lógica de negócio em main.c permaneça agnóstica ao hardware subjacente.
 
 ## Funcionalidades Implementadas
 O sistema executa duas tarefas principais de forma concorrente:
- ### Tarefa de Aquisição de Dados: Responsável por ler periodicamente o conversor analógico-digital (ADC) associado ao sensor de temperatura. O valor adquirido é então enviado, através de um mecanismo de comunicação seguro, para a tarefa de visualização.
- ### Tarefa de Visualização: Permanece em estado de bloqueio aguardando a recepção de um novo dado de temperatura. Ao recebê-lo, realiza o processamento necessário para mapear o valor escalar de temperatura a uma representação gráfica na matriz de LEDs. Essa representação consiste em uma barra cujo preenchimento e coloração variam proporcionalmente à temperatura.
+ ### Tarefa de Aquisição de Dados: 
+ Responsável por ler periodicamente o conversor analógico-digital (ADC) associado ao sensor de temperatura. O valor adquirido é então enviado, através de um mecanismo de comunicação seguro, para a tarefa de visualização.
+ ### Tarefa de Visualização: 
+ Permanece em estado de bloqueio aguardando a recepção de um novo dado de temperatura. Ao recebê-lo, realiza o processamento necessário para mapear o valor escalar de temperatura a uma representação gráfica na matriz de LEDs. Essa representação consiste em uma barra cujo preenchimento e coloração variam proporcionalmente à temperatura.
 ## Requisitos de Hardware e Procedimento de Execução
- ### Hardware: Placa de desenvolvimento BitDogLab ou Raspberry Pi Pico, equipada com uma matriz de LEDs RGB e sensor de temperatura interno.
+ ### Hardware: 
+ Placa de desenvolvimento BitDogLab ou Raspberry Pi Pico, equipada com uma matriz de LEDs RGB e sensor de temperatura interno.
  ### Toolchain: Ambiente de desenvolvimento configurado para o SDK do Raspberry Pi Pico, utilizando VSCode ou similar.
  
  ## Procedimento de Execução:
