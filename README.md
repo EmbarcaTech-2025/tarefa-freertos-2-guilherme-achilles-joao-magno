@@ -9,6 +9,9 @@ Instituição: EmbarcaTech - HBr
 Brasília, junho de 2025
 
 ---
+## Vídeo do projeto
+
+[![Vídeo do projeto em funcionamento](https://img.youtube.com/vi/Y1DlGxmF3XM/mqdefault.jpg)](https://www.youtube.com/watch?v=Y1DlGxmF3XM)
 
 ## Visão Geral
 Este documento detalha a arquitetura e implementação de um sistema embarcado multitarefa desenvolvido sobre o sistema operacional de tempo real (RTOS) FreeRTOS. O objetivo principal do projeto é realizar a aquisição de dados de temperatura do sensor interno do microcontrolador e apresentar essa informação de forma contínua e visual através de uma matriz de diodos emissores de luz (LEDs).
