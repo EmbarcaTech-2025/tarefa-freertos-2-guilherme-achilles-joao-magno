@@ -26,7 +26,8 @@ O sistema executa duas tarefas principais de forma concorrente:
 ## Requisitos de Hardware e Procedimento de Execução
  ### Hardware: 
  Placa de desenvolvimento BitDogLab ou Raspberry Pi Pico, equipada com uma matriz de LEDs RGB e sensor de temperatura interno.
- ### Toolchain: Ambiente de desenvolvimento configurado para o SDK do Raspberry Pi Pico, utilizando VSCode ou similar.
+ ### Toolchain: 
+ Ambiente de desenvolvimento configurado para o SDK do Raspberry Pi Pico, utilizando VSCode ou similar.
  
  ## Procedimento de Execução:
    * Assegure que o arquivo CMakeLists.txt do projeto esteja configurado para vincular as bibliotecas do FreeRTOS-Kernel e FreeRTOS-Pico.
